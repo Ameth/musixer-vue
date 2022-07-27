@@ -2,7 +2,7 @@
   <div v-show="isPlayer">
     <h3>{{ player.title }}</h3>
     <h4>{{ player.artist }}</h4>
-    <audio :src="player.preview" autoplay></audio>
+    <audio ref="player" :src="player.preview" autoplay></audio>
   </div>
 </template>
 
