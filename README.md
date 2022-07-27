@@ -1,4 +1,4 @@
-#Musixer App
+# Musixer App
 
 [Live demo](http://github.com "Live demo")
 
@@ -10,5 +10,6 @@
 
 Utilizando la API de [rapidapi.com](https://rapidapi.com/ "rapidapi.com") para [Deezer](https://www.deezer.com "Deezer"), consulta un artista, ver sus últimos álbumes y escuchar sus canciones en directo.
 
-##Licencia
+## Licencia
+
 ![GitHub](https://img.shields.io/badge/licence-MIT-%23E34F26?logo=github)
