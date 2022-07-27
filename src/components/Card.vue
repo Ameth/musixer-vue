@@ -1,16 +1,13 @@
 <template>
-  <div class="card" v-for="item in results" :key="item">
+  <div class="card" v-for="item in data" :key="item.id">
     <div class="card-image">
-      <img
-        src="https://e-cdns-images.dzcdn.net/images/artist/29cf8413069db1fe5570ba32e2e945b7/500x500-000000-80-0-0.jpg"
-        alt=""
-      />
+      <img :src="item.album.cover_big" alt="album picture" />
     </div>
     <div class="card-footer">
-      <h3>De la ilusión al miedo</h3>
-      <h4>Ricardo Arjona</h4>
-      <h5>⭐699162</h5>
-      <div class="card-footer--btnPlay">
+      <h3>{{ item.title }}</h3>
+      <h4>{{ item.artist.name }}</h4>
+      <h5>⭐{{ item.rank }}</h5>
+      <div class="card-footer--btnPlay" @click="reproducir(item)">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"
@@ -28,10 +25,27 @@
 </template>
 
 <script setup>
+// import { reactive } from "vue";
+
 const props = defineProps({
-  results: Array,
+  data: Array,
   default: () => [],
 });
+
+const emit = defineEmits(["reproducir"]);
+
+const reproducir = (data) => {
+  emit("reproducir", [
+    {
+      title: data.title,
+      artist: data.artist,
+      preview: data.preview,
+    },
+  ]);
+  //   console.log(info.title);
+  //   console.log(info.artist.name);
+  //   console.log(info.preview);
+};
 </script>
 
 <style scoped>

@@ -30,13 +30,16 @@
   width: 100%;
   top: -500px;
 }
+.header-searchbox {
+  position: relative;
+}
 .header-inputText {
   position: absolute;
   top: 300px;
   left: 500px;
   font-size: 30px;
   background-color: #fff;
-  width: auto;
+  width: 100vh;
   height: auto;
   margin: 0 auto 10px auto;
   padding: 10px 20px 10px 20px;
@@ -44,6 +47,20 @@
 
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
+  border-radius: 30px;
+}
+
+.header-button-search {
+  position: absolute;
+  cursor: pointer;
+  top: 300px;
+  left: 500px;
+  font-size: 30px;
+  width: auto;
+  height: auto;
+  margin: 0 auto 10px 585px;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid #ccc;
   border-radius: 30px;
 }
 
