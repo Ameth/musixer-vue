@@ -1,6 +1,6 @@
 # Musixer App
 
-[Live demo](http://github.com "Live demo")
+[Live demo](https://musixer.netlify.app/)
 
 ## Tecnologías 💻
 
